@@ -1,0 +1,6 @@
+FROM java:8-jre
+RUN curl -o h2o.zip http://download.h2o.ai/versions/h2o-3.8.2.9.zip
+RUN unzip h2o-3.8.2.9.zip
+RUN cd h2o-3.8.2.9
+EXPOSE 54321
+CMD ["java -jar h2o.jar"]
